@@ -28,11 +28,11 @@ module.exports.getAll = function (req, res) {
 
   for (var idx = 0; idx < files.length; idx++) {
     if (files[idx].indexOf('.json') == files[idx].length - 5) {
-      results += fs.readFileSync(path + '/' + files[idx] + ',');
+      results += fs.readFileSync(path + '/' + files[idx]) + ',';
     }
   }
-  results = result.substr(0, results.length - 1);
-  results = ']';
+  results = results.substr(0, results.length - 1);
+  results += ']';
 
   res.setHeader('Content-Type', 'application/json');
   res.send(results);

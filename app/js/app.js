@@ -20,7 +20,7 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngRoute'])
         controller: 'EventController'
       });
 
-      $routeProvider.otherwise({ redirect: '/events' });
+    $routeProvider.otherwise({ redirectTo: '/events' });
   })
   .factory('myCache', function ($cacheFactory) {
     return $cacheFactory('myCache', { capacity: 3 });
