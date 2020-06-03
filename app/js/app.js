@@ -20,6 +20,12 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngRoute'])
         controller: 'EventController'
       });
 
+    $routeProvider.when('/sampleDirective',
+      {
+        templateUrl: 'templates/SampleDirective.html',
+        controller: 'SampleDirectiveController'
+      });
+
     $routeProvider.otherwise({ redirectTo: '/events' });
     $locationProvider.html5Mode(true);
   })

@@ -1,0 +1,27 @@
+<a href="/event/{{event.id}}">
+  <div class="span5">
+    <div class="well hoverwell">
+      <div class="row">
+        <h2 class="span6">
+          {{event.name}}
+        </h2>
+      </div>
+      <div class="row">
+        <div class="span1">Date:</div>
+        <span>{{event.date}}</span>
+      </div>
+      <div class="row">
+        <div class="span1">Time:</div>
+        <span>{{event.time}}</span>
+      </div>
+      <div class="row">
+        <div class="span1">Location:</div>
+        <span>{{event.location.address}}</span>
+      </div>
+      <div class="row">
+        <div class="span1">&nbsp;</div>
+        <span>{{event.location.city}}, {{event.location.province}}</span>
+      </div>
+    </div>
+  </div>
+</a>
